@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gitignore-excludes"
+version = "0.1.0"
+description = "Turn the files Git ignores into exclude lists for restic, borg and other backup tools."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Jonathan Wrede" }]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+gitignore-excludes = "gitignore_excludes.cli:main"
+
+[tool.ruff]
+line-length = 120
